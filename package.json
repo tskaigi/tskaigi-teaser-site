@@ -12,6 +12,7 @@
     "build": "astro build",
     "check": "astro check",
     "preview": "astro preview",
+    "test": "node --test 'src/**/*.test.ts' 'scripts/**/*.test.ts'",
     "astro": "astro",
     "format": "pnpm exec prettier . --write",
     "prepare": "husky"
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "husky": "^9.1.7",
