@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, envField } from "astro/config";
+import { defineConfig, fontProviders, envField } from "astro/config";
 
 import react from "@astrojs/react";
 
@@ -10,6 +10,17 @@ const base = process.env.BASE_PATH ?? "/";
 
 // https://astro.build/config
 export default defineConfig({
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Outfit",
+      cssVariable: "--font-outfit",
+      weights: [300, 600],
+      styles: ["normal"],
+      subsets: ["latin"],
+      display: "swap",
+    },
+  ],
   site,
   base,
   output: "static",
