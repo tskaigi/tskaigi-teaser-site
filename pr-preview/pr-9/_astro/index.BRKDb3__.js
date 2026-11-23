@@ -1,0 +1,1 @@
+import{t as e}from"./react.C1eXT9gT.js";import{t}from"./jsx-runtime.C67a1HSz.js";var n=e(),r=(e,t)=>new Date(e).getTime()<=t.getTime(),i={badge:`_badge_azo37_1`},a=t(),o=()=>()=>{},s=({finishedAt:e,closedAtBuild:t})=>(0,n.useSyncExternalStore)(o,()=>r(e,new Date),()=>t)?(0,a.jsx)(`span`,{className:i.badge,children:`終了済み`}):null;export{s as default};
