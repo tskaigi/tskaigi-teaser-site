@@ -45,8 +45,6 @@ src/
 ├── pages/               # URLに対応するAstroページ
 │   ├── index.astro      # トップページ
 │   ├── 404.astro        # 404ページ
-│   ├── code-of-conduct/
-│   │   └── index.astro
 │   └── side-event/
 │       └── index.astro
 └── styles/              # カラーパレットや文字設定などの共通CSS

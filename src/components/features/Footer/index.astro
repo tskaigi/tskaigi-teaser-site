@@ -1,1 +1,71 @@
-<footer>TSkaigi 2027 test footer</footer>
+---
+import { withBase } from "../../../utils/url";
+import styles from "./index.module.css";
+
+const links = [
+  { href: withBase("/"), label: "Home" },
+  { href: withBase("/side-event/"), label: "サイドイベント" },
+  {
+    href: "https://docs.tskaigi.org/code-of-conduct",
+    label: "行動規範",
+    external: true,
+  },
+];
+
+const socialLinks = [
+  { href: "https://x.com/tskaigi", label: "公式X" },
+  { href: "https://tskaigi.hatenablog.com/", label: "Blog" },
+  { href: "https://www.youtube.com/@tskaigi", label: "公式YouTube" },
+];
+---
+
+<footer class={styles.footer}>
+  <div class={styles.inner}>
+    <div class={styles.brand}>
+      <img
+        src={withBase("/logo-white.svg")}
+        alt="TSKaigi"
+        width="126"
+        height="41"
+        class={styles.logo}
+      />
+      <p>一般社団法人 TSkaigi Association</p>
+    </div>
+
+    <div class={styles.section}>
+      <p class={styles.sectionTitle}>ページ一覧</p>
+      <ul class={styles.list}>
+        {links.map(({ href, label, external }) => (
+          <li>
+            <a
+              href={href}
+              class={styles.link}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class={styles.section}>
+      <p class={styles.sectionTitle}>公式アカウント</p>
+      <ul class={styles.list}>
+        {socialLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</footer>
