@@ -1,10 +1,12 @@
 ---
+import { Image } from "astro:assets";
+import logoWhite from "../../../assets/logo-white.svg";
 import { withBase } from "../../../utils/url";
 import styles from "./index.module.css";
 
 const links = [
   { href: withBase("/"), label: "Home" },
-  { href: withBase("/side-event/"), label: "サイドイベント" },
+  { href: withBase("/side-events/"), label: "サイドイベント" },
   {
     href: "https://docs.tskaigi.org/code-of-conduct",
     label: "行動規範",
@@ -22,14 +24,14 @@ const socialLinks = [
 <footer class={styles.footer}>
   <div class={styles.inner}>
     <div class={styles.brand}>
-      <img
-        src={withBase("/logo-white.svg")}
+      <Image
+        src={logoWhite}
         alt="TSKaigi"
-        width="126"
-        height="41"
+        width={126}
+        height={41}
         class={styles.logo}
       />
-      <p>一般社団法人 TSkaigi Association</p>
+      <p>一般社団法人 TSKaigi Association</p>
     </div>
 
     <div class={styles.section}>

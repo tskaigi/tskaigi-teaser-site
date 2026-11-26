@@ -2,6 +2,7 @@
   width: 100%;
   color: #ffffff;
   font-size: 0.875rem;
+  font-weight: 400;
   background: var(--color-footer-background);
 }
 
@@ -34,8 +35,6 @@
 
 .logo {
   display: block;
-  width: 126px;
-  height: 41px;
 }
 
 .section {
@@ -59,6 +58,7 @@
 
 .link {
   color: inherit;
+  font-weight: inherit;
   text-decoration: none;
 }
 
@@ -72,15 +72,16 @@
     padding: 4rem;
     column-gap: 4rem;
   }
+
+  .brand,
+  .section {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 @media (min-width: 1024px) {
   .inner {
     column-gap: 6rem;
-  }
-
-  .brand,
-  .section {
-    width: 18rem;
   }
 }
