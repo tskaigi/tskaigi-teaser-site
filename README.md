@@ -51,8 +51,6 @@ src/
 ├── pages/               # URLに対応するAstroページ
 │   ├── index.astro      # トップページ
 │   ├── 404.astro        # 404ページ
-│   ├── code-of-conduct/
-│   │   └── index.astro
 │   └── side-events/
 │       └── index.astro
 ├── schemas/             # データのzod schemaと型（Astro同梱のastro/zodを使う）
